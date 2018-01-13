@@ -1,0 +1,22 @@
+<%- include header.ejs %>
+
+  <div id=content>
+    <h1>Welcome!</h1>
+  </div>
+
+ <%if(loggedInUser.user){ %>
+    <div id=loggedInUserName>  
+        <h2><%=loggedInUser.user%><h2><br>
+        <h2>Tokens: <%=loggedInUser.tokens%><span></span></h2> 
+    </div>  
+<% } %>
+<%- include footer.ejs %>
+
+<style type="text/css">
+ #loggedInUserName{
+   position:absolute;
+   top:0;
+   right:0;
+  }
+</style>
+

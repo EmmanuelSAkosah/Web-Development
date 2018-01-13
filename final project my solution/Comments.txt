@@ -1,0 +1,12 @@
+Missing Features:
+1.An interface to allow the administrator to perform CRUD (Create, Retrieve, Update, Delete) operations on the items. 
+2. A way to allow the administrator to export a list of redeemed items as CSV file. 
+3. User authentication (Log in) 
+
+In Progress:
+4. Token deduction during item deduction not implemented yet
+5. Some client-side ajax calls dont get responses which cause the browser to wait
+
+Bugs:
+1.Redeeming items when it's in detailed view causes the whole detailed view to be saved in the
+redeemed items list.
