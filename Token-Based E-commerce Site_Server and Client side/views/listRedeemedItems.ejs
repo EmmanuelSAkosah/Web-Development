@@ -1,0 +1,28 @@
+
+<%- include header.ejs %>
+
+<div id=content>
+    <h5>Relying on server-side code to re-render the page</h5>
+    
+    <h4>List of Redeemed items in the order</h4><br>
+    <p>Item TokenValue QuantityRedeemed DateRedeemed ListOfRedeemers</p>
+    <ul>
+    <% for (let redeemedItem of redeemedItemsList) {
+         
+      %>
+        <li>
+          <span><%=redeemedItem.item%></span>        
+          <span><%=redeemedItem.tokenValue%></span>
+          <span><%=redeemedItem.quantityRedeemed%></span>
+          <span><%=redeemedItem.redeemedOn.toLocaleString()%></span>
+          <span>
+              <ol>
+          <% for (let redeemer of redeemedItem.redeemers) {  %>
+             <li><%=redeemer%></li>
+          <% } %>           
+             </ol>
+        </span>
+        </li>
+    <% } %>
+    </ul>  
+       
